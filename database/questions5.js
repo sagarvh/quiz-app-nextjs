@@ -34,7 +34,7 @@ const questions5 = [
             answer: "4. All the above",
       },
       { 
-        questionText: "Which Indian Artists are leveraging NFT’s to monetize their art",
+        questionText: "Which Indian Artists are leveraging NFT's to monetize their art",
         
         options: [ 
         "1. AR Rahman",
@@ -44,6 +44,19 @@ const questions5 = [
         ],
               answer: "3. Both",
         },
+        { 
+          questionText: "Who founded bitcoin",
+          
+          options: [ 
+          
+          "1. IBM",
+          "2. Vitalik Buterin",
+          "3. Anonymous",
+          "4. Satoshi Nakamoto",
+          ],
+                answer: "4. Satoshi Nakamoto",
+          
+          },
   ];
   
   export default questions5;
