@@ -6,7 +6,7 @@ const Question = ({
   answer,
   handleQuestion,
   handleScore,
-  handleWrongAnswer,
+  //handleWrongAnswer,
 }) => {
   const [isCoreect, setIsCorrect] = useState(null);
   const [score, SetScore] = useState(0);
@@ -17,7 +17,7 @@ const Question = ({
       SetScore(score + 10);
     } else {
       setIsCorrect(false);
-      handleWrongAnswer();
+      //handleWrongAnswer();
     }
   };
 

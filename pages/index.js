@@ -3,11 +3,45 @@ import Document from "./document";
 import StartCard from "./components/StartCard";
 import Footer from "./components/Footer";
 import Question from "./components/Question";
-import questions from "./../database/questions";
+import questions1 from "./../database/questions";
+import questions2 from "./../database/questions2";
+import questions3 from "./../database/questions3";
+import questions4 from "./../database/questions4";
+import questions5 from "./../database/questions5";
 import HighScores from "./components/HighScores";
 import AllDone from "./components/AllDone";
 import Github from "./components/Github";
 import TimeUp from "./components/TimeUp";
+var questions = "";
+  const rndInt = randomIntFromInterval(1, 5);
+  switch (rndInt) {
+    case 1:
+      questions = questions1;
+      console.log("1");
+      break;
+    case 2:
+      questions = questions2;
+      console.log("2");
+      break;
+    case 3:
+      questions = questions3;
+      console.log("3");
+      break;
+    case 4:
+      questions = questions4;
+      console.log("4");
+      break;
+    case 5:
+      questions = questions5;
+      console.log("5");
+      break;
+    default:
+      questions = questions3;
+  }
+
+  function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
 
 const Home = () => {
   const [state, setState] = useState("start");
@@ -22,8 +56,8 @@ const Home = () => {
     } else {
       setState("done");
       setTimeout(() => {
-        setTimerOn(false);
-        setTime(50000);
+       // setTimerOn(false);
+       // setTime(50000);
       }, 900);
     }
   };
@@ -46,7 +80,7 @@ const Home = () => {
   };
 
   //Handleing the Timer
-
+/*
   const [time, setTime] = useState(50000);
   const [timerOn, setTimerOn] = useState(false);
   const [deduct, setDeduct] = useState(false);
@@ -80,12 +114,12 @@ const Home = () => {
 
   //Functions to Start the timer
   const handleTimerStart = () => {
-    setTimerOn(true);
-  };
+    setTimerOn(false);
+  }; 
 
   const handleWrongAnswer = () => {
-    setDeduct(true);
-  };
+    setDeduct(false);
+  }; */
 
   //Hanlde The High Scores
 
@@ -116,14 +150,14 @@ const Home = () => {
           </p>
           <i className="fas fa-hand-point-left fa-lg text-white"></i>
         </div>
-        <p className="text-right text-white font-light">Time: 00:{time / 1000}</p>
+        <p className="text-right text-white font-light">Blockchain Quiz</p>
       </div>
       <div className="flex flex-col min-h-screen">
         <div className=" justify-center">
           {state === "start" && (
             <StartCard
               handleState={handleState}
-              handleTimerStart={handleTimerStart}
+              //handleTimerStart={handleTimerStart}
             />
           )}
           {state === "quiz" && (
@@ -134,7 +168,7 @@ const Home = () => {
               handleQuestion={handleQuestion}
               handleState={handleState}
               handleScore={handleScore}
-              handleWrongAnswer={handleWrongAnswer}
+             // handleWrongAnswer={handleWrongAnswer}
             />
           )}
           {state === "highscore" && (
