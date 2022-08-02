@@ -6,7 +6,7 @@ const questions3 = [
     "1. Applications that run on a blockchain or peer-to-peer(P2P) network of computers",
     "2. DApps should be mandatorily distributed across geographies",
     ],
-          answer: "1. Applications that run on a blockchain or peer-to-peer (P2P) network of computers",
+          answer: "1. Applications that run on a blockchain or peer-to-peer(P2P) network of computers",
     },
   { 
     questionText: "Which Indian Artists are leveraging NFT’s to monetize their art",
