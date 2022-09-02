@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="bg-skin-main mt-auto flex justify-around flex-col items-center sm:flex-row">
       <p className="font-medium text-white py-2">
-        Career Carnival 3.0 -CHENNAI | CIC Blockchain India 
+        ConnXon Bangalore | CIC Blockchain India 
       </p>
     </div>
   );
