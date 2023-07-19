@@ -54,7 +54,7 @@ const questions5 = [
           "3. Anonymous",
           "4. Satoshi Nakamoto",
           ],
-                answer: "4. Satoshi Nakamoto",
+                answer: "4. Satoshi Nakamoto ",
           
           },
   ];
